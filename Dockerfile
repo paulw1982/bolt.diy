@@ -8,6 +8,8 @@ RUN corepack enable pnpm
 # Copiar arquivos de dependências
 COPY package.json pnpm-lock.yaml ./
 
+RUN npm install -g corepack@latest
+
 # Instalar dependências
 RUN pnpm install
 
